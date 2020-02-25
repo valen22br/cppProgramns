@@ -59,11 +59,6 @@ int main()
 {
     cout << "Enter with a string to be coded. (ie. WWWBBWWWWW)";
     cin >> inputString;
-    if (inputString.length() == 0)
-    {
-        inputString = "WWWBBWWWWW";
-    }
-
     cout << "run_length_encode " << run_length_encode(inputString) << endl;
     cout << "run_length_decode " << run_length_decode(run_length_encode(inputString)) << endl;
     return 0;
