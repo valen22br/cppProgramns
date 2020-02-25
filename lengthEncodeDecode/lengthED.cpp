@@ -16,7 +16,7 @@ string run_length_encode(const string& inputString){
             count++;
             i++;
         }
-        outputString += to_string(count) + inputString[i];
+        outputString += inputString[i] + to_string(count);
     }
     
     return outputString;
@@ -31,7 +31,7 @@ string run_length_decode(const string& inputString){
             inputString.copy(tempChar, 1, i);
             repetitions = atoi(tempChar);
             for( int j = 1; j <= repetitions; j++){
-                outputString += inputString[i+1];
+                outputString += inputString[i-1];
             }
         }
     }
